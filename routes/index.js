@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/upload',
-  items.multer.single('item'), 
+  items.multer.single('item'),
   items.sendUploadToGCS,
   (req, res) => {
     res.send({

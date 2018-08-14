@@ -12,6 +12,7 @@ mongoose.connect(`mongodb://${process.env.userdb}:${process.env.passdb}@ds121382
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var items = require('./routes/item')
 
 var app = express();
 app.use(require('cors')())
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/item',items)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
