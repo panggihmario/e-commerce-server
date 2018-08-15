@@ -47,6 +47,7 @@ class ItemController {
             name : req.body.name,
             category : req.body.category,
             price : req.body.price,
+            url : req.body.url
         })
         .then(function(data){
             res.json(data)
